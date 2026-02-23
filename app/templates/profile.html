@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html>
 <head>
     <title>Profile</title>
@@ -10,19 +9,19 @@
 <h2>Profile</h2>
 
 <form method="POST">
-    <input class="form-control mb-2" type="text" name="name" value="{{user[1]}}">
-    <input class="form-control mb-2" type="email" name="email" value="{{user[2]}}">
+    <input class="form-control mb-2" type="text" name="name" value="{{ user.name }}">
+    <input class="form-control mb-2" type="email" name="email" value="{{ user.email }}">
     <button class="btn btn-primary">Update</button>
 </form>
 
 <h4 class="mt-4">Reset Password</h4>
 
-<form method="POST" action="/reset">
+<form method="POST" action="/reset_password">
     <input class="form-control mb-2" type="password" name="password" placeholder="New Password" required>
     <button class="btn btn-warning">Reset Password</button>
 </form>
 
-<a href="/dashboard">Back</a>
+<a href="/dashboard" class="btn btn-secondary mt-3">Back</a>
 
 </body>
 </html>
