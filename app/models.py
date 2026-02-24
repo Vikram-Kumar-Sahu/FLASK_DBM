@@ -12,7 +12,7 @@ class User(db.Model, UserMixin):
     email = db.Column(db.String(120), unique=True, nullable=False)
     password = db.Column(db.String(200), nullable=False)
     role = db.Column(db.String(20), default="student")
-    grade = db.Column(db.String(10), default="Not Assigned")
+    grade = db.Column(db.String(50), default="Not Assigned")
 
     def set_password(self, password):
         self.password = bcrypt.generate_password_hash(password).decode('utf-8')
